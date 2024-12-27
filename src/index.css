@@ -5,9 +5,73 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: #3381a2;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.App {
+
+  
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+
+
+  & .dualForm {
+    
+    position: relative;
+
+    padding: 20px 30px;
+    
+    display: flex;
+    flex-direction: column;      
+    min-height: 100vh;
+    gap: 30px;
+
+    box-shadow: 0 0 30px #414141;
+    border-radius: 10px;
+    
+    height: auto; min-height: 400px;
+    width: 50%; min-width: 400px;
+
+    transition: transform .4s;
+  }
+  
+  
+  
+  & .switcher {
+    
+    position: relative;
+
+    
+    width: 100%;
+    height: auto;
+    
+    padding: 10px 0;
+  }
+  
+  
+  
+  & .choiceForm {
+    
+    position: relative;
+    
+    flex: 5;
+    
+    min-width: 80%;
+    height: auto;
+
+  }
+
+
+  & .dualForm.rotate {
+
+    transform: rotateY(360deg);
+  }
 }

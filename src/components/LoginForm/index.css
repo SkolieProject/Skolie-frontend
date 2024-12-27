@@ -1,0 +1,28 @@
+.LoginForm {
+
+    position: relative;
+
+    min-width: 80%;
+    height: 250px;
+
+    margin: 20px;
+    margin-bottom: 50px;
+
+    border: 1px solid red;
+
+
+    & .formContent {
+
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        width: 100%;
+        height: auto;
+
+        padding: 10px;
+
+    }
+}

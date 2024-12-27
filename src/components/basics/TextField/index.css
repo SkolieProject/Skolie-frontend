@@ -1,0 +1,79 @@
+.TextField {
+
+    position: relative;
+
+    width: 50%;
+    height: 40px;
+    
+    padding: 15px;
+    
+    background-color: #878787;
+    
+    & .inputLabel {
+        
+        top: 50%;
+        
+        position: absolute;
+        z-index: 1;
+        
+        padding: 0 10px;
+
+        color: azure;
+        font-weight: 500;
+        font-size: medium;
+        
+        background-color: #878787;
+
+        transition: top .2s, font-size .2s;
+        
+        transform: translateY(-50%);
+        top: 50%; left: 20px;
+
+        cursor: auto;
+
+    }
+
+
+    & .inputField {
+
+        position: absolute;
+        
+        width: 90%;
+        height: 35px;
+        
+        padding-left: 10px;
+        
+        border-radius: 4px;
+        border: 2px solid azure;
+        background-color: transparent;
+        
+        color: azure;
+        
+        transform: translate(-50%, -50%);
+        top: 50%; left: 50%;
+        
+        outline: none;
+
+        transition: border .2s;
+    }
+
+
+
+    & .inputField:focus {
+
+        border: 2px solid #697373;
+        
+        & + .inputLabel {
+            
+            top: 20%;
+            font-size: smaller;
+        }
+    }
+
+
+    & .inputField:valid + .inputLabel {
+        
+        top: 20%;
+        font-size: smaller;
+    }
+}

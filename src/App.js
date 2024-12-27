@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
 
-function App() {
+import SwitchFormType from "./components/SwitchFormType";
+import SignupForm from "./components/SignupForm";
+import LoginForm from "./components/LoginForm";
+
+function App( ) {  
+
+  const [formType, setFormType] = useState('login');
+  
+  const changeFormType = () => {
+    if ( formType === 'login' ) {
+
+      setFormType('signup');
+      
+      return;
+    }
+    setFormType('login');
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+        <div className={`dualForm ${formType === 'login' ? '' : 'rotate'}`}>
+          
+          <nav className="switcher">
+          
+            <SwitchFormType formTypeChanger={() => changeFormType()}></SwitchFormType>
+          </nav>
+          
+          <section className="choiceForm">
+          
+            {(formType === 'login') ? (
+              <LoginForm></LoginForm>
+            ) : (
+              <SignupForm></SignupForm>
+            )}
+          </section>
+        </div>
     </div>
   );
 }

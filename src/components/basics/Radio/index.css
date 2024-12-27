@@ -1,0 +1,99 @@
+.RadioOptions__container {
+
+    position: relative;
+
+
+    width: 200px;
+    min-height: 60px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    background-color: #f0ffff25;
+    border-radius: 10px;
+    padding: 5px;
+
+
+    & .RadioOption__container{
+        
+        flex: 1;
+
+        cursor: pointer;
+
+
+
+        & .toggle {
+
+            position: absolute;
+            width: 0; height: 0; opacity: 0;
+            
+        }
+
+        & .toggle:checked + .radioLabel > .checkmark:after {
+
+            width: 15px; height: 15px;
+        }
+
+        
+
+        & .radioLabel {
+        
+            position: relative;
+        
+            display: flex;
+            flex-direction: row;
+            justify-content: none;
+            gap: 5px;
+
+            width: 100%; height: 100%;
+
+
+            & .checkmark {
+                
+                position: relative;
+                display: inline-block;
+                
+                
+                width: 20px; height: 20px;
+                border: 2px solid azure;
+                
+                border-radius: 9999px;
+
+                
+            }
+
+            & .checkmark:after {
+
+                position: relative;
+                display: block;
+                content: '';
+                
+                background-color: azure;
+                
+                width: 0px; height: 0px;
+
+                border-radius: 9999px;
+
+                transform: translate(-50%, -50%);
+                top: 50%; left: 50%;
+
+                transition: width .1s, height .1s;
+            }
+            
+            
+            & .optionLabel {
+                
+                display: inline-block;
+                flex: 3;
+                
+                color: azure;
+                font-weight: 600;
+
+            }
+        }
+    }
+}
