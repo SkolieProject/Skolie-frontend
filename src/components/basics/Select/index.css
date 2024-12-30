@@ -1,0 +1,37 @@
+.Select__container {
+
+    width: 300px;
+    height: 40px;
+
+    outline: none;
+
+    color: azure;
+    font-weight: 600;
+
+    border: 1px solid red;
+    
+    background-color: transparent;
+
+
+    & .option__container {
+
+        width: 200px;
+        height: 40px;
+
+        color: black;
+        
+        padding: 5px;
+        
+        background-color: transparent;
+
+        transition: background-color .4s;
+
+        border: 1px solid red;
+        
+    }
+
+    & .option__container:focus {
+
+        background-color: #5b5bb4;
+    }
+}

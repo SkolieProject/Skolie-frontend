@@ -78,7 +78,7 @@
 
                 border-radius: 9999px;
 
-                transform: translate(-50%, -50%);
+                transform: translate(-48%, -48%);
                 top: 50%; left: 50%;
 
                 transition: width .1s, height .1s;
